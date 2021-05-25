@@ -1,0 +1,26 @@
+Modify "Jupiter" "Sol"
+{
+	Radius	71492
+	Oblateness 0.06487
+	Albedo	0.343	# bond albedo
+
+	Atmosphere
+	{				# no real atmospheric data, just best-fit parameters for realistic look
+		Height		300	# necessary for proper rendering
+		Mie		0.00015
+
+		MieAsymmetry	-0.25
+
+		Rayleigh	[ 0.00005 0.00008 0.00009 ]
+
+ 		Absorption	[ 0.00002 0.00008 0.00013 ]
+		MieScaleHeight	110
+	}
+}
+
+AltSurface "Jupiter Hubble 2015" "Sol/Jupiter"
+	{
+		Texture "jupiter-hubble-2015.*"
+		BumpMap	"jupiter-hubble-2015-bump.*"
+		BumpHeight 0.8
+	}
